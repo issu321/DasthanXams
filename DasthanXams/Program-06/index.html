@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+<body>
+<h2>Student Registration</h2>
+<form id="regForm">
+  Name: <input type="text" id="name"><br><br>
+  Email: <input type="text" id="email"><br><br>
+  Mobile: <input type="text" id="mobile"><br><br>
+  Password: <input type="password" id="password"><br><br>
+  Confirm Password: <input type="password" id="confirmPassword"><br><br>
+  <button type="submit">Register</button>
+</form>
+
+<script>
+document.getElementById("regForm").onsubmit = function (e) {
+  e.preventDefault();
+
+  var name = document.getElementById("name").value.trim();
+  var email = document.getElementById("email").value.trim();
+  var mobile = document.getElementById("mobile").value.trim();
+  var pwd = document.getElementById("password").value;
+  var cpwd = document.getElementById("confirmPassword").value;
+
+  var msg = "Registration successful!";
+  if (name == "") {
+    msg = "Please enter your name";
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    msg = "Please enter a valid email";
+  } else if (!/^[6-9]\d{9}$/.test(mobile)) {
+    msg = "Please enter a valid mobile number";
+  } else if (pwd.length < 8) {
+    msg = "Password must contain at least 8 characters";
+  } else if (pwd != cpwd) {
+    msg = "Passwords do not match";
+  }
+
+  alert(msg);
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Program</title>
+</head>
+<body>
+<h2>Student Result</h2>
+<p>Open browser console (press F12) to view student result details.</p>
+
+<script>
+  let studentName = "Rahul", age = 20, marks = [85, 72, 90, 68, 80];
+  let total = 0;
+  for (let m of marks) total += m;
+  let average = total / marks.length;
+
+  console.log("----- Student Details -----");
+  console.log("Name:", studentName);
+  console.log("Age:", age);
+  console.log("Marks:", marks);
+  console.log("Total Marks:", total);
+  console.log("Average Marks:", average);
+
+  let grade;
+  if (average >= 90) grade = "A+";
+  else if (average >= 80) grade = "A";
+  else if (average >= 70) grade = "B";
+  else if (average >= 60) grade = "C";
+  else grade = "Fail";
+  console.log("Grade:", grade);
+  console.log("Result:", average >= 40 ? "PASS" : "FAIL");
+
+  console.log("----- Subject Marks -----");
+  marks.forEach((m, i) => console.log("Subject " + (i + 1) + ":", m));
+  console.log("Highest Mark:", Math.max(...marks));
+</script>
+</body>
+</html>

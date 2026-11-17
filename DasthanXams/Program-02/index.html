@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Web Page using CSS3</title>
+<style>
+body { margin:0; font-family:Arial, sans-serif; background:#f4f4f4; }
+header { background:#0077cc; color:white; text-align:center; padding:15px; }
+nav { background:#333; text-align:center; padding:10px; }
+nav a { color:white; text-decoration:none; margin:10px; font-weight:bold; }
+nav a:hover { color:yellow; }
+.container { width:80%; margin:20px auto; background:white; padding:20px; border:1px solid #ccc; }
+h2 { color:#0077cc; text-align:center; }
+p { text-align:justify; line-height:1.6; font-size:16px; }
+button { display:block; margin:20px auto; padding:10px 20px; background:#28a745; color:white; border:none; cursor:pointer; font-size:16px; }
+button:hover { background:#218838; }
+footer { background:#333; color:white; text-align:center; padding:10px; margin-top:20px; }
+
+/* Responsive design */
+@media (max-width:768px) {
+  .container { width:95%; }
+  nav a { display:block; margin:8px 0; }
+}
+</style>
+</head>
+<body>
+<header><h1>Responsive Web Page</h1></header>
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</nav>
+<div class="container">
+  <h2>Welcome</h2>
+  <p>This is a simple responsive web page designed using CSS3. It demonstrates colors, backgrounds, margins, padding, text formatting, alignment, hover effects, and media queries for responsive design.</p>
+  <button>Learn More</button>
+</div>
+<footer><p>&copy; 2026 Responsive Web Design | CSS3 Demo</p></footer>
+</body>
+</html>
